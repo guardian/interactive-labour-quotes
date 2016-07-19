@@ -1,4 +1,10 @@
 @import "fonts";
+@import "mq";
+
+$snp: #FCDD03;
+$con: #005789;
+$lab: #E31F26;
+$ukip: #7D0069;
 
 html,
 body {
@@ -9,4 +15,154 @@ body {
 }
 
 .interactive-embed {
+	max-width: 620px;
+	margin-left:0px;
+	@include mq(desktop) {
+		margin-left:160px;
+	}
+	@include mq(leftCol) {
+		margin-left:240px;
+	}
+}
+
+.intro {
+
+}
+
+.cat {
+
+}
+
+.cat__head {
+	@include fs-headline(4);
+	font-weight: 600;
+}
+
+.cat__p {
+	@include fs-bodyCopy(3);
+}
+
+.cat__cons {
+
+}
+
+.cat__cons__name {
+	@include f-textSans;
+	font-size:18px;
+	font-weight:600;
+	margin-bottom:5px;
+	border-top: 1px dotted #dcdcdc;
+	padding-top:8px;
+}
+
+.cat__cons__mp {
+	margin:0;
+}
+
+.cat__cons__mp__name {
+	@include fs-textSans(3);
+	display: inline-block;
+	color: #333;
+	margin:0;
+	padding-left:3px;
+}
+
+.cat__cons__chart__head {
+	@include fs-textSans(3);
+	color: #767676;
+	margin:0;
+}
+
+
+.cat__cons__mp__party--Con {
+	margin-top:0;
+	margin-bottom:-1px;
+	width:7px;
+	height: 12px;
+	display: inline-block;
+	border-radius: 2px;
+	background-color: $con;
+}
+
+.cat__cons__mp__party--UKIP {
+	margin-top:0;
+	margin-bottom:-1px;
+	width:7px;
+	height: 12px;
+	display: inline-block;
+	border-radius: 2px;
+	background-color: $ukip;
+}
+
+.cat__cons__mp__party--Lab {
+	margin-top:0;
+	margin-bottom:-1px;
+	width:7px;
+	height: 12px;
+	display: inline-block;
+	border-radius: 2px;
+	background-color: $lab;
+}
+
+.cat__cons__mp__party--SNP {
+	margin-top:0;
+	margin-bottom:-1px;
+	width:7px;
+	height: 12px;
+	display: inline-block;
+	border-radius: 2px;
+	background-color: $snp;
+}
+
+.cat__cons__chart {
+	border-radius: 2px;
+	height:10px;
+	width:50%;
+	max-width:100px;
+	background-color:#e2e2e2;
+	display: inline-block;
+
+}
+
+.cat__cons__chart__lab {
+	height:10px;
+	border-radius: 2px;
+	background-color:$lab;
+	margin:0;
+}
+
+.cat__cons__chart__p {
+	@include fs-textSans(3);
+	display: inline-block;
+	margin:0;
+}
+
+.cat__cons__chart__p--loss {
+	font-weight: bold;
+	@include fs-textSans(3);
+	display: inline-block;
+	margin:0;
+}
+
+.cat__cons__chart__p--gain {
+	font-weight: bold;
+	@include fs-textSans(3);
+	display: inline-block;
+	margin:0;	
+}
+
+.cat__cons__quote__text {
+	@include fs-headline(4);
+	font-weight: 300;
+	color: #767676;
+	margin-bottom:0px;
+}
+
+.cat__cons__quote__name {
+	text-align:right;
+	@include fs-headline(3);
+	font-weight: 400;
+	color: #767676;
+	margin-top:10px;
+	margin-right:30px;
 }

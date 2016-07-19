@@ -1,1 +1,18 @@
-<div class="test-msg">Loading…</div>
+<div class="intro">Write an intro</div>
+
+{{#categories}}
+	<div class="cat__head">{{title}}</div>
+	<div class="cat__p">{{copy}}</div>
+	{{#constituencies}}
+		<h3 class="cat__cons__name">{{name}}</h3>
+
+		<div class="cat__cons__mp"><div class="cat__cons__mp__party--{{party}}"></div><p class="cat__cons__mp__name">{{mp}} ({{party}}) is the current MP</p></div>
+		<p class="cat__cons__chart__head">In the 2015 General Election:</p>
+		<div class="cat__cons__chart"><div class="cat__cons__chart__lab" style="width:{{maj}}%"></div></div>
+		<p class="cat__cons__chart__p">Lab {{maj}}%</p>
+		<p class="cat__cons__chart__p--{{result}}">{{drop}}</p>
+
+		<div class=""><p class="cat__cons__quote__text">{{quote}}</p></div>
+		<div class=""><p class="cat__cons__quote__name">— {{title}}</p></div>
+	{{/constituencies}}
+{{/categories}}
